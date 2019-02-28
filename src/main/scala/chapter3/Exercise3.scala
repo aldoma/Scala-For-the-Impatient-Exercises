@@ -1,8 +1,4 @@
-package chapter1
-
-/*
-Repeat the preceding assignment, but produce a new array with the swapped values. Use for / yield .
- */
+package chapter3
 
 object Exercise3 extends App {
 
