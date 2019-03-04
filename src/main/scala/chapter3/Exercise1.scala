@@ -10,7 +10,7 @@ object Exercise1 extends App {
   val random = Random
 
   def generate(n: Int) = {
-    for (i <- 0 to n) yield
+    for (_ <- 0 to n) yield
       random.nextInt(n)
   }
 
