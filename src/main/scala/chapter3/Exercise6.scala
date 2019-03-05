@@ -6,7 +6,7 @@ reverse sorted order? How do you do the same with an ArrayBuffer[Int]?
  */
 
 // NOTE: Non-recursive implementations
-object Exercise6 extends App {
+object Exercise6 {
   def reverseSort(c: Array[Int]): Unit = {
     def swap(j: Int): Unit = {
       val t = c(j)
@@ -20,9 +20,4 @@ object Exercise6 extends App {
           swap(j)
         }
   }
-
-  val test = Array(0, 4, -5, 8, 6, -7, 12, 3)
-  println(s"   Original: ${test.mkString(", ")}")
-  reverseSort(test)
-  println(s"Transformed: ${test.mkString(", ")}")
 }
