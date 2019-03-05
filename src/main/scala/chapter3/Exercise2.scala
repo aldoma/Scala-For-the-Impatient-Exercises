@@ -4,8 +4,7 @@ package chapter3
 Write a loop that swaps adjacent elements of an array of integers. For example,
 Array(1, 2, 3, 4, 5) becomes Array(2, 1, 4, 3, 5) .
  */
-object Exercise2 extends App {
-
+object Exercise2 {
   def swap(c: Array[Int]): Unit = {
     for (i <- c.indices by 2 if i < c.length - 1) {
       val t = c(i)
@@ -13,12 +12,4 @@ object Exercise2 extends App {
       c(i + 1) = t
     }
   }
-
-  val array = Array(1, 2, 3, 4, 5)
-  swap(array)
-  println(array.mkString(", "))
-
-  val array2 = array :+ 6
-  swap(array2)
-  println(array2.mkString(", "))
 }
