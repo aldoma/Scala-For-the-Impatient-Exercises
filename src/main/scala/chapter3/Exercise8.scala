@@ -24,7 +24,7 @@ import scala.collection.mutable.ArrayBuffer
   * positions of the negative elements, dropping the first element, reversing the
   * sequence, and calling a.remove(i) for each index.
   */
-object Exercise8 extends App {
+object Exercise8 {
   def sampleSolution(a: ArrayBuffer[Int]): Unit = {
     var first = true
     var n = a.length
@@ -48,12 +48,4 @@ object Exercise8 extends App {
     val positionsToRemove = for (i <- c.indices if c(i) < 0) yield i
     for (i <- positionsToRemove.drop(1).reverse) c.remove(i)
   }
-
-  val test = ArrayBuffer(4, -8, 6, 4, -1, 0, -6, 6, 0, 7, -8)
-  val test2 = test.clone()
-  println(s"                                   Original: ${test.mkString(", ")}")
-  sampleSolution(test)
-  println(s"Transformed (with the inefficient solution): ${test.mkString(", ")}")
-  scalaWaySolution(test2)
-  println(s"Transformed (with the 'Scala way' solution): ${test2.mkString(", ")}")
 }
