@@ -1,9 +1,9 @@
 package chapter3
 
+import org.scalatest.FlatSpec
 import org.scalatest.Matchers._
-import org.scalatest.{BeforeAndAfterEach, FlatSpec}
 
-class Exercise4Test extends FlatSpec with BeforeAndAfterEach {
+class Exercise4Test extends FlatSpec {
 
   private val test = Array(1, -4, 0, 5, 2, -3, 9)
   private val result = Exercise4.produce(test)
@@ -23,7 +23,6 @@ class Exercise4Test extends FlatSpec with BeforeAndAfterEach {
   }
 
   it should "have the first half with all negative or zero values" in {
-    val negative = test.filter(_ <= 0)
-    secondHalf should contain theSameElementsInOrderAs negative
+    secondHalf should contain theSameElementsInOrderAs test.filter(_ <= 0)
   }
 }

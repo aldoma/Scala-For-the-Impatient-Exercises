@@ -1,17 +1,13 @@
 package chapter3
 
+import org.scalatest.FlatSpec
 import org.scalatest.Matchers._
-import org.scalatest.{BeforeAndAfterEach, FlatSpec}
 
-class Exercise2Test extends FlatSpec with BeforeAndAfterEach {
+class Exercise2Test extends FlatSpec {
 
-  val array = Array(1, 2, 3, 4, 5)
-  var result: Array[Int] = _
-
-  override def beforeEach(): Unit = {
-    result = array.clone()
-    Exercise2.swap(result)
-  }
+  private val array = Array(1, 2, 3, 4, 5)
+  private val result = array.clone()
+  Exercise2.swap(result)
 
   "The swapped array" should "be of type Array[Int]" in {
     result shouldBe a[Array[_]]

@@ -1,11 +1,11 @@
 package chapter3
 
+import org.scalatest.FlatSpec
 import org.scalatest.Matchers._
-import org.scalatest.{BeforeAndAfterEach, FlatSpec}
 
 import scala.util.Random
 
-class Exercise6Test extends FlatSpec with BeforeAndAfterEach {
+class Exercise6Test extends FlatSpec {
 
   private val random = Random
   private val test = (for (_ <- 1 to 10) yield random.nextInt(200) - 100).toArray

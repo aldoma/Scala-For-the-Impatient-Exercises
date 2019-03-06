@@ -1,16 +1,12 @@
 package chapter3
 
+import org.scalatest.FlatSpec
 import org.scalatest.Matchers._
-import org.scalatest.{BeforeAndAfterEach, FlatSpec}
 
-class Exercise1Test extends FlatSpec with BeforeAndAfterEach {
+class Exercise1Test extends FlatSpec {
 
-  val argument = 15
-  var result: Array[Int] = _
-
-  override def beforeEach() {
-    result = Exercise1.generate(argument)
-  }
+  private val argument = 15
+  private val result = Exercise1.generate(argument)
 
   "The generated array" should "be of type Array [Int]" in {
     result shouldBe a[Array[_]]
