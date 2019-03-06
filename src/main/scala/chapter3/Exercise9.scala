@@ -8,7 +8,7 @@ import scala.collection.mutable.ArrayBuffer
   * truncate the buffer. Don’t copy any elements before the first unwanted
   * element.
   */
-object Exercise9 extends App {
+object Exercise9 {
   def scalaWaySolution(c: ArrayBuffer[Int]): Unit = {
     var first = true
     var start = false
@@ -27,10 +27,4 @@ object Exercise9 extends App {
       c(dest) = c(origin)
     c.trimEnd(offset)
   }
-
-
-  val test = ArrayBuffer(4, -8, 6, 4, -1, 0, -6, 6, 0, 7, -8)
-  println(s"   Original: ${test.mkString(", ")}")
-  scalaWaySolution(test)
-  println(s"Transformed: ${test.mkString(", ")}")
 }
