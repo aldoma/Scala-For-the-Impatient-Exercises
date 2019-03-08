@@ -13,8 +13,8 @@ import scala.io.Source
   * Or look at Chapter 9 for a Scalaesque way.
   * At the end, print out all words and their counts.
   */
-object Exercise2 extends App {
-  def countByWord(file: String) = {
+object Exercise2 {
+  def countByWord(file: String): Map[String, Int] = {
     def normalizeWord(word: String) = {
       val wordClean = for (ch <- word if ch.isLetterOrDigit) yield ch
       if (wordClean.length == 1) wordClean else wordClean.head + wordClean.tail.toLowerCase()
