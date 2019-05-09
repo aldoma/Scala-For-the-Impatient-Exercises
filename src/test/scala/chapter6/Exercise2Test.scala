@@ -1,9 +1,9 @@
 package chapter6
 
+import org.scalatest.FlatSpec
 import org.scalatest.Matchers._
-import org.scalatest.{BeforeAndAfterEach, FlatSpec}
 
-class Exercise2Test extends FlatSpec with BeforeAndAfterEach {
+class Exercise2Test extends FlatSpec {
 
   "One inch" should "be 2,54 cm" in {
     InchesToCentimeters(1) should equal(2.54 +- 0.00001)
